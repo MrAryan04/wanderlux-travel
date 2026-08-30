@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trip Cost Calculator | WanderLux Travel Agency</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">Wander<span>Lux</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link">Destinations & Services</a></li>
+          <li><a href="calculator.html" class="nav-link active">Trip Calculator</a></li>
+          <li><a href="appointment.html" class="nav-link">Book Appointment</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section-padding container">
+    <div class="section-title reveal-on-scroll">
+      <h2>Interactive Trip Cost Estimator</h2>
+      <p>Estimate the expected budget for your upcoming getaway based on travelers, destination, and package tier.</p>
+    </div>
+
+    <div class="form-container reveal-on-scroll">
+      <form id="calculatorForm">
+        <div class="form-group">
+          <label for="calcDestination">Destination</label>
+          <select id="calcDestination" class="form-control" required>
+            <option value="" disabled selected>Select a destination</option>
+            <option value="Bali">Bali, Indonesia</option>
+            <option value="Tokyo">Tokyo, Japan</option>
+            <option value="Paris">Paris, France</option>
+            <option value="Sydney">Sydney, Australia</option>
+            <option value="Queenstown">Queenstown, New Zealand</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="calcTravellers">Number of Travellers</label>
+          <input type="number" id="calcTravellers" class="form-control" min="1" max="20" value="2" required>
+        </div>
+
+        <div class="form-group">
+          <label for="calcDays">Duration (Days)</label>
+          <input type="number" id="calcDays" class="form-control" min="1" max="60" value="5" required>
+        </div>
+
+        <div class="form-group">
+          <label for="calcStyle">Travel Style / Package Tier</label>
+          <select id="calcStyle" class="form-control" required>
+            <option value="budget">Budget (Standard 3-star, Essential Sightseeing)</option>
+            <option value="standard" selected>Standard (4-star, Guided Tours, Daily Breakfast)</option>
+            <option value="luxury">Luxury (5-star, Private Transfers, Fine Dining Included)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width:100%; font-size:1rem;">Calculate Estimate</button>
+      </form>
+
+      <div id="calculatorResult" class="calculator-result" aria-live="polite"></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 WanderLux Travel Agency. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

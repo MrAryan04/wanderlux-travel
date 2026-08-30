@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Consultation | WanderLux Travel Agency</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">Wander<span>Lux</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link">Destinations & Services</a></li>
+          <li><a href="calculator.html" class="nav-link">Trip Calculator</a></li>
+          <li><a href="appointment.html" class="nav-link active">Book Appointment</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section-padding container">
+    <div class="section-title reveal-on-scroll">
+      <h2>Schedule a Travel Consultation</h2>
+      <p>Speak one-on-one with our senior itinerary planners to build your bespoke journey.</p>
+    </div>
+
+    <div class="form-container reveal-on-scroll">
+      <form id="appointmentForm">
+        <div class="form-group">
+          <label for="aptName">Full Name *</label>
+          <input type="text" id="aptName" class="form-control" placeholder="e.g. Jane Doe" required>
+        </div>
+
+        <div class="form-group">
+          <label for="aptEmail">Email Address *</label>
+          <input type="email" id="aptEmail" class="form-control" placeholder="jane@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="aptPhone">Contact Phone Number *</label>
+          <input type="tel" id="aptPhone" class="form-control" placeholder="+61 400 000 000" required>
+        </div>
+
+        <div class="form-group">
+          <label for="aptDate">Preferred Consultation Date *</label>
+          <input type="date" id="aptDate" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label for="aptMessage">Trip Vision & Preferences *</label>
+          <textarea id="aptMessage" class="form-control" rows="4" placeholder="Tell us about the destinations, activities, or dates you have in mind..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width:100%;">Submit Appointment Request</button>
+      </form>
+      <div id="appointmentStatus" class="status-box"></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 WanderLux Travel Agency. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
